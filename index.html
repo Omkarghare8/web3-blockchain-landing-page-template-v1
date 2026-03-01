@@ -2912,7 +2912,7 @@
 // Runtime integrity check — verifies signature exists in key files and shows a persistent overlay if missing.
 (async function pageIntegrityCheck(){
     const token = 'Omkar R. Ghare | Front-End & Web Developer | Designed and Built January 2026';
-    const files = ['Index.html', 'css/style.css', 'js/script.js'];
+    const files = ['index.html', 'css/style.css', 'js/script.js'];
     try {
         const texts = await Promise.all(files.map(f => fetch(f).then(r => r.ok ? r.text() : '')));
         const missing = files.filter((f, i) => !texts[i] || !texts[i].includes(token));
